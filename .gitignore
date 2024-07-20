@@ -6,6 +6,7 @@ dist/
 
 # dependencies
 node_modules/
+.vscode/
 
 # logs
 npm-debug.log*
@@ -16,6 +17,7 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
+.gitignore
 
 # macOS-specific files
 .DS_Store
