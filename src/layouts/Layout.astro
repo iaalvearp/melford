@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import '@fontsource-variable/montserrat';
+
 ---
 
 <!doctype html>
@@ -20,16 +22,17 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--text: #3C3C3B;
-		--primary: #68745B;
-		--secondary: #586A51;
-		--white: #FFFFFF;
+	@font-face {
+		font-family: "brand";
+		src: url('fonts/Brand.otf');
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-size: 224px;
-		background: var(--primary);
+	@font-face {
+		font-family: "against";
+		src: url('fonts/against.ttf');
 	}
-	
+
+	@font-face {
+		font-family: "montse";
+		src: url('fonts/Montse.ttf');
+	}
 </style>

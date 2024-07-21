@@ -1,24 +1,28 @@
 ---
-import '@fontsource-variable/montserrat';
-
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'
 ---
 
 <Layout title="Melford - Matrimio de Melanie y Wilford">
 	<main class="w-full min-h-screen overflow-hidden">
-		<header class="w-[90%] max-w-3xl min-h-screen mx-auto relative">
-			<div class="w-full h-10 bg-[var(--secondary)] absolute z-10"></div>
-			<picture class="w-full h-[calc(100vh_-_2.5rem)] relative z-0">
-				<img class="w-full h-auto object-cover object-bottom sticky" src="img/hero.webp" alt="hero pic matrimonio de Melanie & Wilford">
-				<div class="w-[19rem] fixed bottom-0 text-[var(--white)] z-10">
-					<p class="text-5xl font-medium text-current">The perfect match</p>
-					<h2 class="text-2xl font-extrabold text-current">MELANIE + WILFORD</h2>
-				</div>
+		<Hero />
+		<section class="w-full min-h-screen flex flex-col justify-center items-center bg-bg text-text">
+			<p class="w-[90%] text-center font-montse">¡El amor florece y el destino nos une en un momento mágico!</p>
+			<p class="w-[90%] text-center font-montse">Nos complace anunciar el inicio de nuestro viaje juntos.</p>
+			<p class="w-[90%] text-center font-montse">Nosotros,</p>
+			<div class="flex">
+				<h2>MELANIE</h2>
+				<h2>&</h2>
+				<h2>WILFORD</h2>
+			</div>
+			<picture>
+				<img src="img/pic-4.webp" alt="Melanie & Wilford">
+				<img src="img/pic-3.webp" alt="Melanie & Wilford">
+				<img src="img/pic-5.webp" alt="Melanie & Wilford">
 			</picture>
-		</header>
+			<p class="w-[90%] text-center font-montse">estamos encantados de invitarlos, a celebrar el amor y la unión en</p>
+			<h2>NUESTRA BODA</h2>
+			<img src="img/leaves-1.svg" alt="">
+		</section>
 	</main>
 </Layout>
-
-<style>
-	
-</style>
