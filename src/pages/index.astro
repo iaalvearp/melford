@@ -1,28 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro'
+import PhotoSection from '../components/PhotoSection.astro'
 ---
 
 <Layout title="Melford - Matrimio de Melanie y Wilford">
 	<main class="w-full min-h-screen overflow-hidden">
 		<Hero />
-		<section class="w-full min-h-screen flex flex-col justify-center items-center bg-bg text-text">
-			<p class="w-[90%] text-center font-montse">¡El amor florece y el destino nos une en un momento mágico!</p>
-			<p class="w-[90%] text-center font-montse">Nos complace anunciar el inicio de nuestro viaje juntos.</p>
-			<p class="w-[90%] text-center font-montse">Nosotros,</p>
-			<div class="flex">
-				<h2>MELANIE</h2>
-				<h2>&</h2>
-				<h2>WILFORD</h2>
-			</div>
-			<picture>
-				<img src="img/pic-4.webp" alt="Melanie & Wilford">
-				<img src="img/pic-3.webp" alt="Melanie & Wilford">
-				<img src="img/pic-5.webp" alt="Melanie & Wilford">
-			</picture>
-			<p class="w-[90%] text-center font-montse">estamos encantados de invitarlos, a celebrar el amor y la unión en</p>
-			<h2>NUESTRA BODA</h2>
-			<img src="img/leaves-1.svg" alt="">
-		</section>
+		<PhotoSection />
 	</main>
 </Layout>
+
