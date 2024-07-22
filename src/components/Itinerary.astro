@@ -1,0 +1,83 @@
+
+<section class="w-[90%] max-w-3xl min-h-full md:px-[17%] lg:px-[13%] grid grid-cols-[5rem_5rem_1fr] md:grid-cols-[6rem_5rem_17.5rem] grid-rows-[repeat(6_,_7.5rem)] items-center py-8 mx-auto">
+    <img class="ico aspect-square col-start-1 col-end-2 row-start-1 row-end-2" src="icons/ico-church.svg" alt="church wedding icon">
+    <div class="point col-start-2 col-end-3 row-start-1 row-end-2 bg-text inset-0 m-auto"></div>
+    <div class="col-start-3 col-end-4 row-start-1 row-end-2 flex items-center gap-3">
+        <p><strong>13H00</strong>Ceremonia</p>
+    </div>
+    <img class="ico aspect-square col-start-1 col-end-2 row-start-2 row-end-3" src="icons/ico-bosque-aventura.svg" alt="bosque aventura wedding icon">
+    <div class="point col-start-2 col-end-3 row-start-2 row-end-3 bg-text inset-0 m-auto"></div>
+    <div class="col-start-3 col-end-4 row-start-2 row-end-3 flex items-center">
+        <p><strong>15H00</strong>Recepción</p>
+    </div>
+    <img class="ico aspect-square col-start-1 col-end-2 row-start-3 row-end-4" src="icons/ico-camera.svg" alt="camera wedding icon">
+    <div class="point col-start-2 col-end-3 row-start-3 row-end-4 bg-text inset-0 m-auto"></div>
+    <div class="col-start-3 col-end-4 row-start-3 row-end-4 flex items-center gap-3">
+        <div class="inline-flex max-w-40">
+            <p class="resized"><strong>15H30</strong>Sesión de fotos para los invitados</p>
+        </div>
+        <img class="basic w-[4.5rem] h-auto md:w-28 -ml-5" src="icons/ico-basic.svg" alt="basic snap wedding icon">
+    </div>
+    <img class="ico aspect-square col-start-1 col-end-2 row-start-4 row-end-5" src="icons/ico-car.svg" alt="car wedding icon">
+    <div class="point col-start-2 col-end-3 row-start-4 row-end-5 bg-text inset-0 m-auto"></div>
+    <div class="col-start-3 col-end-4 row-start-4 row-end-5 flex items-center gap-3">
+        <p class="resized"><strong>16H00</strong>Llegada de los novios a la Recepción</p>
+    </div>
+    <img class="ico aspect-square col-start-1 col-end-2 row-start-5 row-end-6" src="icons/ico-cup.svg" alt="cup wedding icon">
+    <div class="point col-start-2 col-end-3 row-start-5 row-end-6 bg-text inset-0 m-auto"></div>
+    <div class="col-start-3 col-end-4 row-start-5 row-end-6 flex items-center gap-3">
+        <p><strong>17H00</strong>Brindis</p>
+    </div>
+    <img class="ico aspect-square col-start-1 col-end-2 row-start-6 row-end-7" src="icons/ico-buffet.svg" alt="buffet wedding icon">
+    <div class="point col-start-2 col-end-3 row-start-6 row-end-7 bg-text inset-0 m-auto"></div>
+    <div class="col-start-3 col-end-4 row-start-6 row-end-7 flex items-center gap-3">
+        <p><strong>18H00</strong>Buffet</p>
+    </div>
+    <div class="col-start-2 col-end-3 row-start-1 -row-end-1 w-full h-full flex justify-center items-center z-0">
+        <div class="w-[0.125rem] h-[600px] bg-text"></div>
+    </div>
+</section>
+
+<style>
+    .ico {
+        width: 5rem;
+    }
+    .point {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        z-index: 10;
+    }
+    p {
+        font-family: montse;
+        letter-spacing: 1px;
+    }
+    .resized {
+        max-width: 9rem;
+    }
+    strong {
+        font-family: against;
+        margin-right: 0.75rem;
+        font-weight: 400;
+    }
+    
+    @media (width > 767px) {
+        .ico {
+            width: 6rem;
+        }
+        p {
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+        }
+        .resized {
+            max-width: 11rem;
+        }
+        strong {
+            font-size: 1.125rem;
+        }
+        .basic {
+            width: 8rem;
+            margin-left: -1rem;
+        }
+    }
+</style>
