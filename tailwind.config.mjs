@@ -8,8 +8,7 @@ export default {
 			'montse': 'montse'
 		},
 		colors: {
-			'primary': '#68745B',
-			'secondary': '#586A51',
+			'primary': '#69735B',
 			'text': '#3C3C3B',
 			'bg': '#FFFFFF'
 		}
