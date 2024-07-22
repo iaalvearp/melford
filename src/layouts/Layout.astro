@@ -22,6 +22,27 @@ const { title, description } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	.spc {
+		letter-spacing: 0.5px;
+	}
+	 .spc1 {
+        letter-spacing: 0px;
+    }
+    .spc1-2 {
+        letter-spacing: 1px;
+    }
+
+    @media (width > 767px) {
+		.spc {
+			letter-spacing: 1px;
+		}
+        .spc1 {
+            letter-spacing: 1px;
+        }
+        .spc1-2 {
+            letter-spacing: 2px;
+        }
+    }
 	@font-face {
 		font-family: "brand";
 		src: url('/fonts/Brand.otf');
