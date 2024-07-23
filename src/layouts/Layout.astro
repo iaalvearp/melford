@@ -32,6 +32,14 @@ const { title, description } = Astro.props;
         letter-spacing: 1px;
     }
 
+	.softMove {
+		animation: softMove 3s linear infinite both;
+	}
+
+	.movingLeftLeaves {
+		animation: movingLeftLeaves 4s ease infinite both;
+	}
+
     @media (width > 767px) {
 		.spc {
 			letter-spacing: 1px;
@@ -42,7 +50,22 @@ const { title, description } = Astro.props;
         .spc1-2 {
             letter-spacing: 2px;
         }
-    }
+
+		@keyframes softMove {
+			0% {
+				transform: rotate(3deg);
+				right: -1rem;
+			}
+			50% {
+				transform: rotate(-3deg);
+				right: -1.5rem;
+			}
+			100% {
+				transform: rotate(3deg);
+				right: -1rem;
+			}
+		}
+	}
 	@font-face {
 		font-family: "brand";
 		src: url('/fonts/Brand.otf');
@@ -55,5 +78,34 @@ const { title, description } = Astro.props;
 	@font-face {
 		font-family: "montse";
 		src: url('/fonts/Montse.ttf');
+	}
+
+	@keyframes softMove {
+		0% {
+			transform: rotate(5deg);
+			right: -2.5rem;
+		}
+		50% {
+			transform: rotate(-5deg);
+			right: -3rem;
+		}
+		100% {
+			transform: rotate(5deg);
+			right: -2.5rem;
+		}
+	}
+	@keyframes movingLeftLeaves {
+		0%{
+			left: -30%;
+			transform: rotate(2deg);
+		}
+		50%{
+			left: -32%;
+			transform: rotate(-2deg);
+		}
+		100%{
+			left: -30%;
+			transform: rotate(2deg);
+		}
 	}
 </style>
