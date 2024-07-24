@@ -1,6 +1,6 @@
  
-<section class="w-full max-w-3xl min-h-full mx-auto overflow-hidden gap-4 flex flex-col pb-8">
-    <img class="w-3/4 max-w-xl h-auto -ml-[20%]" src="img/leaves-5.svg" alt="">
+<section class="w-full max-w-3xl min-h-full mx-auto overflow-hidden gap-4 flex flex-col relative z-10 pt-8">
+    <img class="softMove leaf-top w-3/4 max-w-xl h-auto -ml-[20%]" src="img/leaves-5.svg" alt="">
     <div class="w-[90%] max-w-3xl min-h-full flex justify-between md:justify-center gap-[.25rem] md:gap-10 mx-auto">
         <div class="grid gap-2 w-[75%] max-w-[414px]">
             <p class="spc1-2 font-montse text-base md:text-xl">Parroquia Santuario Nuestra Señora de la Alborada</p>
@@ -36,6 +36,9 @@
 </section>
 
 <style>
+    .leaf-top {
+        transform-origin: 0 90%;
+    }
     .delayed {
         animation-delay: 300ms;
     }

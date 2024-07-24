@@ -1,10 +1,10 @@
 
 
-<section class="relative w-full max-w-3xl min-h-full mx-auto overflow-hidden pb-10 md:pb-16">
+<section class="relative w-full max-w-3xl min-h-full mx-auto overflow-hidden py-10 md:pb-16">
     <img
     src="img/leaves-1.png"
     alt="leaves melford wedding"
-    class="w-[8.5rem] md:w-[17rem] absolute top-0 -right-4 md:-right-0" />
+    class="move w-[8.5rem] md:w-[17rem] absolute top-0 -right-4 md:-right-0" />
     <img 
     src="img/dress-code.svg" 
     alt="dress code wedding Melanie & Wilford" 
@@ -31,7 +31,7 @@
     <img
     src="img/leaves-1.png"
     alt="leaves melford wedding"
-    class="left-side w-[8.5rem] md:w-[16rem] absolute top-[11rem] md:top-[17rem] -left-4 md:-left-0" />
+    class="left-side movingLeft w-[8.5rem] md:w-[16rem] absolute top-[12rem] md:top-[18rem] -left-4 md:-left-0" />
     <img
     src="img/envelope.svg"
     alt="gif wedding Melanie & Wilford" 
@@ -47,14 +47,48 @@
     <img
     src="img/leaves-1.png"
     alt="leaves melford wedding"
-    class="rot w-[8.5rem] md:w-[17rem] absolute bottom-0 -right-4 md:-right-0" />
+    class="movingRight rot w-[8.5rem] md:w-[17rem] absolute bottom-0 -right-4 md:-right-0" />
 </section>
 
 <style>
+    .move {
+        transform-origin: 100% 100%;
+    }
     .left-side {
-        transform: rotateY(180deg) rotate(340deg);
+        transform: rotateY(180deg) rotate(335deg);
     }
     .rot {
         transform: rotate(335deg);
+    }
+    .movingLeft {
+        animation: movingLeft 4s linear infinite both;
+    }
+
+    .movingRight {
+        animation: movingRight 6s ease-in infinite both;
+    }
+
+    @keyframes movingLeft {
+        0% {
+            transform: rotateY(180deg) rotate(335deg);
+        }
+        50% {
+            transform: rotateY(160deg) rotate(330deg);
+        }
+        100% {
+            transform: rotateY(180deg) rotate(335deg);
+        }
+    }
+
+    @keyframes movingRight {
+        0% {
+            transform: rotate(335deg);
+        }
+        50% {
+            transform: rotate(330deg);
+        }
+        100% {
+            transform: rotate(335deg);
+        }
     }
 </style>

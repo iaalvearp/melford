@@ -33,12 +33,54 @@ const { title, description } = Astro.props;
     }
 
 	.softMove {
-		animation: softMove 3s linear infinite both;
+		animation: softMove 8s linear infinite both;
+	}
+	
+	.move {
+		animation: softMove 6s linear infinite both;
+
 	}
 
 	.movingLeftLeaves {
 		animation: movingLeftLeaves 4s ease infinite both;
 	}
+
+	@keyframes move {
+			0% {
+				transform: rotate(2deg) translateX(0px);
+			}
+			50% {
+				transform: rotate(-10deg) translateX(10px);
+			}
+			100% {
+				transform: rotate(2deg) translateX(1px);
+			}
+		}
+		@keyframes softMove {
+			0% {
+				transform: rotate(2deg) translateX(0px);
+			}
+			50% {
+				transform: rotate(-6deg) translateX(10px);
+			}
+			100% {
+				transform: rotate(2deg) translateX(1px);
+			}
+		}
+		@keyframes movingLeftLeaves {
+			0%{
+				left: -30%;
+				transform: rotate(2deg);
+			}
+			50%{
+				left: -32%;
+				transform: rotate(-2deg);
+			}
+			100%{
+				left: -30%;
+				transform: rotate(2deg);
+			}
+		}
 
     @media (width > 767px) {
 		.spc {
@@ -53,18 +95,16 @@ const { title, description } = Astro.props;
 
 		@keyframes softMove {
 			0% {
-				transform: rotate(3deg);
-				right: -1rem;
+				transform: rotate(2deg) translateX(0px);
 			}
 			50% {
-				transform: rotate(-3deg);
-				right: -1.5rem;
+				transform: rotate(-4deg) translateX(10px);
 			}
 			100% {
-				transform: rotate(3deg);
-				right: -1rem;
+				transform: rotate(2deg) translateX(1px);
 			}
 		}
+		
 	}
 	@font-face {
 		font-family: "brand";
@@ -80,32 +120,5 @@ const { title, description } = Astro.props;
 		src: url('/fonts/Montse.ttf');
 	}
 
-	@keyframes softMove {
-		0% {
-			transform: rotate(5deg);
-			right: -2.5rem;
-		}
-		50% {
-			transform: rotate(-5deg);
-			right: -3rem;
-		}
-		100% {
-			transform: rotate(5deg);
-			right: -2.5rem;
-		}
-	}
-	@keyframes movingLeftLeaves {
-		0%{
-			left: -30%;
-			transform: rotate(2deg);
-		}
-		50%{
-			left: -32%;
-			transform: rotate(-2deg);
-		}
-		100%{
-			left: -30%;
-			transform: rotate(2deg);
-		}
-	}
+	
 </style>

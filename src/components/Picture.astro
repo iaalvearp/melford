@@ -7,7 +7,21 @@
 
 <style>
     .flower {
-        transform: rotate(355deg);
+        transform: rotate(-10deg);
+        transform-origin: 100% 50%;
+        animation: movingFlower 8s ease-out infinite both;
+    }
+
+    @keyframes movingFlower {
+        0% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
     }
     
     @media (width > 767px) {

@@ -11,8 +11,8 @@
         <p class="spc w-4/5  max-w-[300px] md:max-w-md mx-auto text-xs md:text-lg font-montse">Queremos que nos acompañen en este momento tan anhelado en el que celebraremos nuestra unión. <strong>No</strong> contaremos con ningún programa ni área especial para los <strong>niños</strong>, por lo que solo se permitirá el ingreso a los adultos a la recepción.</p>
     </div>
     <picture class="w-full h-24 md:h-48 flex justify-between items-center relative mt-4 overflow-hidden">
-        <img class="w-[70%] h-auto absolute -left-[30%]" src="img/leaves-2.svg" alt="leaves wedding Melanie & Wilford">
-        <img class="w-[44%] h-auto right-0 absolute" src="img/leaves-3.svg" alt="leaves wedding Melanie & Wilford">
+        <img class="softMove leftLeaf w-[70%] h-auto absolute -left-[30%]" src="img/leaves-2.svg" alt="leaves wedding Melanie & Wilford">
+        <img class="softMove rightLeaf w-[44%] h-auto right-0 absolute" src="img/leaves-3.svg" alt="leaves wedding Melanie & Wilford">
     </picture>
     <div class="spc w-4/5 max-w-[300px] md:max-w-md mx-auto text-xs md:text-lg font-montse grid justify-items-center gap-2">
         <p>Esperamos contar con su presencia ya que es parte importante de nuestra boda.</p>
@@ -23,3 +23,24 @@
         </div>
     </div>
 </section>
+
+<style>
+    .leftLeaf {
+        transform-origin: 0% 50%;
+    }
+    .rightLeaf {
+        transform-origin: 100% 50%;
+        animation-delay: 2s;
+    }
+    @keyframes softMove {
+        0% {
+            transform: rotate(2deg) translateX(0px);
+        }
+        50% {
+            transform: rotate(0deg) translateX(10px);
+        }
+        100% {
+            transform: rotate(2deg) translateX(1px);
+        }
+    }
+</style>
