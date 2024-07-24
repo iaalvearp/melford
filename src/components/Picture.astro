@@ -7,20 +7,20 @@
 
 <style>
     .flower {
-        transform: rotate(-10deg);
-        transform-origin: 100% 50%;
-        animation: movingFlower 8s ease-out infinite both;
+        transform: rotate(-5deg);
+        transform-origin: 100% 90%;
+        animation: movingFlower 8s cubic-bezier(1,-0.68, 0.66, 1.55) infinite both;
     }
 
     @keyframes movingFlower {
         0% {
-            transform: rotate(-10deg);
+            transform: rotate(-5deg);
         }
         50% {
-            transform: rotate(10deg);
+            transform: rotate(5deg);
         }
         100% {
-            transform: rotate(-10deg);
+            transform: rotate(-5deg);
         }
     }
     
