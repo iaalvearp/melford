@@ -50,23 +50,21 @@
     let audio = new Audio('/sounds/music.m4a')
 
     const playMusic = () => {
+        btnPlay.style.transform = "scale(0)"
+        btnPause.style.transform = "scale(1)"
         audio.play()
     }
+
     const pauseMusic = () => {
         audio.pause()
+        btnPlay.style.transform = "scale(1)"
+        btnPause.style.transform = "scale(0)"
     }
 
     playMusic()
+    
 
-    btnPause.addEventListener('click', () =>{
-        pauseMusic()
-        btnPlay.classList.toggle('pressed')
-        btnPause.classList.toggle('pressed')
-    })
-    btnPlay.addEventListener('click', () =>{
-        playMusic()
-        btnPlay.classList.toggle('pressed')
-        btnPause.classList.toggle('pressed')
-    })
+    btnPause.addEventListener('click', pauseMusic)
+    btnPlay.addEventListener('click', playMusic)
 
 </script>
