@@ -61,7 +61,7 @@
         btnPause.style.transform = "scale(0)"
     }
 
-    document.addEventListener('astro:page-load', playMusic)
+    document.addEventListener('DOMContentLoaded', playMusic)
     
 
     btnPause.addEventListener('click', pauseMusic)
