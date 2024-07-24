@@ -9,12 +9,14 @@ import DressCode from '../components/DressCode.astro';
 import Confirmation from '../components/Confirmation.astro';
 import Picture from '../components/Picture.astro';
 import Footer from '../components/Footer.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
 ---
 
 <Layout 
 title="Melford - Matrimonio de Melanie y Wilford"
 description="Matrimonio de Melanie y Wilford">
-	<main class="w-full min-h-screen overflow-hidden">
+	<main class="w-full max-w-3xl min-h-screen mx-auto overflow-hidden relative">
+		<MusicPlayer />
 		<Hero />
 		<PhotoSection />
 		<DateSection />
