@@ -8,6 +8,9 @@ const { title, description } = Astro.props;
 
 ---
 
+
+
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -22,6 +25,7 @@ const { title, description } = Astro.props;
 		<div class="fixed w-full h-screen -z-10 bg-primary/30"></div>
 		<slot />
 	</body>
+	<script src="../../index.js" type="module"></script>
 </html>
 <style is:global>
 	.spc {
@@ -43,6 +47,22 @@ const { title, description } = Astro.props;
 
 	}
 
+	#photoSection, #dateSection, #directionSection, #dressCode, #footerSection, #itinerarySection, #pictureSection {
+		animation: appears linear forwards;
+		animation-timeline: view();
+		animation-range: entry 30% cover 40%;
+	}
+
+	@keyframes appears {
+		0% {
+			opacity: 0;
+			transform: scale(.5) translateY('5rem');
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+		}
+	}
 	.movingLeftLeaves {
 		animation: movingLeftLeaves 4s ease infinite both;
 	}

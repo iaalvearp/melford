@@ -13,5 +13,7 @@ export default {
 			'bg': '#FFFFFF'
 		}
 	},
-	plugins: [],
+	plugins: [
+		require('tailwindcss-animated')
+	],
 }
