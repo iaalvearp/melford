@@ -3,20 +3,20 @@
     <p class="w-[85%] max-w-96 text-center font-montse text-sm md:max-w-md md:text-xl">¡El amor florece y el destino nos une en un momento mágico!</p>
     <p class="w-[85%] max-w-96 text-center font-montse text-sm md:max-w-md md:text-xl">Nos complace anunciar el inicio de nuestro viaje juntos.</p>
     <p class="w-[85%] max-w-96 text-center font-montse mt-4 text-sm md:max-w-md md:text-xl">Nosotros,</p>
-    <div class="flex items-center">
+    <div class="beforeAppears flex items-center">
         <h2 class="name font-against text-xl md:text-2xl">MELANIE</h2>
         <h2 class="amp font-brand text-[5rem] md:text-[7rem] m-[0.5rem_0.25rem_0_0.4rem]">&</h2>
         <h2 class="name font-against text-xl md:text-2xl">WILFORD</h2>
     </div>
     <div class="flex gap-4 items-center">
         <picture class="w-32 h-72 md:w-60 md:h-[25rem] relative overflow-hidden">
-            <img class="scrollingPics one h-full w-auto object-cover object-top absolute scale-100 duration-500" src="img/pic-4-min.webp" alt="Melanie & Wilford">
+            <img id="picOne" class="beforeAppears h-full w-auto object-cover object-top absolute" src="img/pic-4-min.webp" alt="Melanie & Wilford">
         </picture>
         <picture class="w-[7.5rem] h-80 md:w-[17rem] md:h-[27rem] relative overflow-hidden">
-            <img class="scrollingPics two h-full w-auto object-cover object-top absolute scale-100 duration-500" src="img/pic-3-min.webp" alt="Melanie & Wilford">
+            <img id="picTwo" class="beforeAppears h-full w-auto object-cover object-top absolute" src="img/pic-3-min.webp" alt="Melanie & Wilford">
         </picture>
         <picture class="w-32 h-72 md:w-60 md:h-[25rem] relative overflow-hidden">
-            <img class="scrollingPics three h-full min-w-full object-cover object-top absolute scale-100 duration-500" src="img/pic-5-min.webp" alt="Melanie & Wilford">
+            <img id="picThree" class="beforeAppears h-full min-w-full object-cover object-top absolute" src="img/pic-5-min.webp" alt="Melanie & Wilford">
         </picture>
     </div>
     <p class="w-[80%] max-w-96 text-center font-montse text-sm md:max-w-md md:text-xl my-4">estamos encantados de invitarlos, a celebrar el amor y la unión en</p>
@@ -45,6 +45,30 @@
         top: 0;
     }
 
+    .beforeAppears {
+        transition-duration: 300ms;
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+    
+    img #picOne {
+        transition-duration: 600ms;
+    }
+
+    img #picTwo {
+        transition-duration: 200ms;
+    }
+
+    img #picThree {
+        transition-duration: 1000ms;
+    }
+    
+
+    .appearElement {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
     @media (width > 767px) {
         .amp {
             line-height: 7rem;
@@ -59,3 +83,25 @@
     }
 
 </style>
+
+<script>
+    const picOne = document.getElementById('picOne')
+    const picTwo = document.getElementById('picTwo')
+    const picThree = document.getElementById('picThree')
+    const pics = document.querySelectorAll('.beforeAppears')
+    const observer = new IntersectionObserver(pics => {
+        pics.forEach(pic => {
+            if (pic.isIntersecting) {
+                pic.target.classList.add("appearElement")
+                observer.unobserve(pic.target)
+            }
+        })    
+    }, {
+        threshold: 0.5,
+    })
+
+    pics.forEach(pic => {
+        observer.observe(pic)
+    })
+    
+</script>
