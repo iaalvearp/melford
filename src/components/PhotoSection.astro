@@ -44,12 +44,6 @@
         transform: scale(1.1);
         top: 0;
     }
-
-    .beforeAppears {
-        transition-duration: 300ms;
-        transform: translateY(5rem);
-        opacity: 0;
-    }
     
     img #picOne {
         transition-duration: 600ms;
@@ -63,11 +57,6 @@
         transition-duration: 1000ms;
     }
     
-
-    .appearElement {
-        transform: translateY(0);
-        opacity: 1;
-    }
 
     @media (width > 767px) {
         .amp {
@@ -83,25 +72,3 @@
     }
 
 </style>
-
-<script>
-    const picOne = document.getElementById('picOne')
-    const picTwo = document.getElementById('picTwo')
-    const picThree = document.getElementById('picThree')
-    const pics = document.querySelectorAll('.beforeAppears')
-    const observer = new IntersectionObserver(pics => {
-        pics.forEach(pic => {
-            if (pic.isIntersecting) {
-                pic.target.classList.add("appearElement")
-                observer.unobserve(pic.target)
-            }
-        })    
-    }, {
-        threshold: 0.5,
-    })
-
-    pics.forEach(pic => {
-        observer.observe(pic)
-    })
-    
-</script>

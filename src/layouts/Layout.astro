@@ -8,8 +8,25 @@ const { title, description } = Astro.props;
 
 ---
 
+<script>
+    
+    const pics = document.querySelectorAll('.beforeAppears')
+    const observer = new IntersectionObserver(pics => {
+        pics.forEach(pic => {
+            if (pic.isIntersecting) {
+                pic.target.classList.add("appearElement")
+                observer.unobserve(pic.target)
+            }
+        })    
+    }, {
+        threshold: 0.5,
+    })
 
-
+    pics.forEach(pic => {
+        observer.observe(pic)
+    })
+    
+</script>
 
 <!doctype html>
 <html lang="es">
@@ -55,6 +72,17 @@ const { title, description } = Astro.props;
 		background-color: rgba(255, 255, 255, 0.8);
 		backdrop-filter: blur(0.25rem);
 	}
+
+	.beforeAppears {
+        transition-duration: 300ms;
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+
+	.appearElement {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
 	@keyframes move {
 			0% {
