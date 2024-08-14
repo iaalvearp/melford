@@ -2,7 +2,7 @@
 <section class="w-full h-[44rem] md:h-[60rem] max-w-3xl mx-auto relative overflow-hidden">
     <img class="bg-pic w-full h-full absolute object-cover bottom-0 z-0" src="img/pic-2.webp" alt="">
     <img class="beforeAppears flower w-[7%] max-w-16 absolute bottom-16 md:bottom-28 left-0 right-0 mx-auto z-10" src="img/flower.png" alt="">
-    <img class="beforeAppears w-3/5 max-w-[27rem] absolute bottom-0 left-0 right-0 mx-auto z-20" src="img/m-and-w.svg" alt="">
+    <img class="w-3/5 max-w-[27rem] absolute bottom-0 left-0 right-0 mx-auto z-20" src="img/m-and-w.svg" alt="">
 </section>
 
 <style>
@@ -10,6 +10,7 @@
         transform: rotate(-5deg);
         transform-origin: 100% 90%;
         animation: movingFlower 8s cubic-bezier(1,-0.68, 0.66, 1.55) infinite both;
+        transition-duration: 500ms;
     }
 
     @keyframes movingFlower {
